@@ -3,66 +3,26 @@
 
 <head>
   <meta charset="utf-8">
-  <script src="index.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="fireworks.js" charset="utf-8" defer></script>
+  <script src="index.js" charset="utf-8" defer></script>
   <title>Memory Game</title>
 </head>
 
 <body>
-  <h1>Memory Game</h1>
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-sm">
-        <div class="card bg-danger mb-2">
-          <div class="card-body">1</div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card bg-primary mb-2">
-          <div class="card-body">2</div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card bg-secondary mb-2">
-          <div class="card-body">3</div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <div class="card bg-success mb-2">
-          <div class="card-body">4</div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card bg-danger mb-2">
-          <div class="card-body">5</div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card bg-warning mb-2">
-          <div class="card-body">6</div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <div class="card bg-success mb-2">
-          <div class="card-body">7</div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card bg-info mb-2">
-          <div class="card-body">8</div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card bg-primary mb-2">
-          <div class="card-body">9</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <p>Select the number of cards you want to play with
+    <select onchange="selectTotalCards(this)">
+      <option value="8">8</option>
+      <option value="10">10</option>
+      <option value="12">12</option>
+      <option value="14">14</option>
+      <option value="16" selected>16</option>
+    </select>
+  </p>
+  <div class="container"></div>
+  <canvas id="canvas" class="fireworks-container"></canvas>
 </body>
 
 </html>
